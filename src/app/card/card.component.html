@@ -1,0 +1,26 @@
+<div class="card__wrapper" [style.background-color]="lightYellow?'#FFF1AA':'#FFDB3C'">
+  <div class="card__main">
+    <div class="card__header" [style.flex-direction]="reverse? 'column-reverse': 'column'">
+      <p class="card__header-subTitle">{{subTitle}}</p>
+      <span class="card__header-subPeriod">{{subPeriod}}</span>
+    </div>
+    <div>
+      <div class="card__info">
+        <p class="card__cost">{{subCost}} ₽</p>
+        <p class="cost__line"> 499 ₽ </p>
+      </div>
+      <div class="card__month">в месяц</div>
+      <div class="card__bottom">
+        <div *ngIf="percent && innerWidth<900" class="card__percentage">-{{percent}}%</div>
+        <button class="subscription__button" (click)="onSubClick()">{{innerWidth>900?subAds:subAddInfo}}</button>
+      </div>
+      <p class="card__addInfo">{{subAddInfo}}</p>
+    </div>
+  </div>
+  <div class="card__additional" (click)="onArrowClick()">
+    <div class="card__icon">
+      <div class="card__icon-arrow">
+      </div>
+    </div>
+  </div>
+</div>

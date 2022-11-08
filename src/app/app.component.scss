@@ -1,0 +1,27 @@
+*, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.subscription__wrapper {
+  margin: 140px 140px 0 140px;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+// max-width can be set
+@media only screen and (max-width: 900px) {
+  .subscription__wrapper {
+    margin: 58px 16px 0px 16px;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
